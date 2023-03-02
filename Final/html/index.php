@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Manila Local Gigs</title>
-        <script src="../javascript/script.js"></script>
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/f74f3994a1.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
-    </head>
-    <body>
-        <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/assets/php"; include($IPATH."nav.html"); ?>
-
+<?php
+  $title = "Home";
+  $page = 'index';
+  $style = '../css/style.css';
+  include_once('../assets/php/nav.php');
+?>
         <!-- BANNER -->
         <section class="banner">
           <div class="carousel__fade">
@@ -250,7 +239,6 @@
         </section>
 
 
-
-    </body>
-    <script src="./script.js"></script>
-</html>
+        <?php 
+        include_once('../assets/php/footer.php');
+        ?>
