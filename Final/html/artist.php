@@ -2,6 +2,7 @@
   $title = "Index";
   $page = 'index';
   $style = '../css/artist.css';
+  $script = '';
   include_once('../assets/php/nav.php');
 ?>
 <!-- START CONTENTS -->
