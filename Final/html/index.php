@@ -2,6 +2,7 @@
   $title = "Home";
   $page = 'index';
   $style = '../css/style.css';
+  $script = '../javascript/script.js';
   include_once('../assets/php/nav.php');
 ?>
         <!-- BANNER -->
@@ -24,35 +25,12 @@
                </div>
             </div>
           </div>
-
-          
         </section>
-         
+
 
         <!-- FEATURED -->
         <section class="featured">
             <h1>FEATURED</h1>
-
-            <!-- <div class="row">
-                <div class="featured-col">
-                    <img src="images/5.jpg" alt="">
-                    <div class="layer">
-                        <h3 class="highlight">ARTIST 1</h3>
-                    </div>
-                </div>
-                <div class="featured-col">
-                    <img src="images/2.jpg" alt="">
-                    <div class="layer">
-                        <h3 class="highlight">ARTIST 1</h3>
-                    </div>
-                </div>
-                <div class="featured-col">
-                    <img src="images/3.jpg" alt="">
-                    <div class="layer">
-                        <h3 class="highlight">ARTIST 1</h3>
-                    </div>
-                </div>
-            </div> -->
                 <!--image card layout start-->
         <div class="container">
             <!--image row start-->
@@ -211,8 +189,6 @@
               <!--image card end-->
             </div>
             <!--image row end-->
-
-
         </section>
 
 
@@ -228,7 +204,7 @@
               <img src="../images/5.jpg" alt="architecture">
             </div>
             <div class="MoreGallery">
-              <a href="#" class="More">More Photos</a>
+              <a href="../html/gallery.php" class="More">More Photos</a>
             </div>
         </section>
 
@@ -239,6 +215,6 @@
         </section>
 
 
-        <?php 
-        include_once('../assets/php/footer.php');
-        ?>
+<?php
+include_once('../assets/php/footer.php');
+?>
