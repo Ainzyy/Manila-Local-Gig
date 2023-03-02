@@ -105,6 +105,34 @@ $result = mysqli_query($con,$query)
   </div>
 </div>
 
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deldata" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Artist Data</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="../config/deletedata.php"  method="POST">
+      <div class="modal-body">
+        <!-- Forms -->
+            <input type ="hidden" name="delete_id" id="delete_id">
+            <h5>Do You Want To Delete This Data?
+
+            </h5>
+      </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+            <button type="submit" name="deletedata" class="btn btn-danger">YES</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
     <!-- Arist Dashboard -->
 	<header class="header text-center">
 		<a href="">Artist Dashboard</a>
@@ -149,8 +177,8 @@ $result = mysqli_query($con,$query)
                                 <td><?php echo $row['band_name']?></td>
                                 <td><?php echo $row['band_type']?></td>
                                 <td><?php echo $row['ig_links']?></td>
-                                <td><button type ="button" class="btn btn-success editbutton">Edit</button></td>
-                                <td><a href="#" class="btn btn-danger">Delete</a></td>
+                                <td><button type ="button" class="btn btn-success editbutton">EDIT</button></td>
+                                <td><button type = "button" class="btn btn-danger delbutton">DELETE</button></td>
                             </tr>
                                 <?php
                                 }
@@ -190,6 +218,28 @@ $(document).ready(function(){
             $('#band_name').val(data[1]);
             $('#band_type').val(data[2]);
             $('#ig_links').val(data[3]); 
+    });  
+});
+</script>
+
+<!-- Delete Script -->
+<script>
+$(document).ready(function(){
+    $('.delbutton').on('click',function() {
+
+
+        $('#deldata').modal('show');
+
+            $tr = $(this).closest('tr');
+
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
+
+            }).get();
+
+            console.log(data);
+
+            $('#delete_id').val(data[0]);
     });  
 });
 </script>
