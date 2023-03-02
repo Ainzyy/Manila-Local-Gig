@@ -1,7 +1,7 @@
 <?php 
 // Connect to database
 require_once('../config/admindb.php');
-$query = "select * from artist_data";
+$query = "select * from schedule";
 $result = mysqli_query($con,$query)
 ?>
 
@@ -25,28 +25,28 @@ $result = mysqli_query($con,$query)
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Artist</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="../config/adddata.php"  method="POST">
+      <form action="../config/venueadddata.php"  method="POST">
       <div class="modal-body">
         <!-- Forms -->
             
                 <div class ="form-group">
-                    <label> Artist ID </label>
-                    <input type ="text" name="artist_id" class="form-control" placeholder="Enter Artist ID">
+                    <label> Gig ID </label>
+                    <input type ="text" name="gig_id" class="form-control" placeholder="Enter Gig ID">
                 </div>
                 
                 <div class ="form-group">
-                    <label> Band Name </label>
-                    <input type ="text" name="band_name" class="form-control" placeholder="Enter Band Name">
+                    <label> Event Name </label>
+                    <input type ="text" name="gig_name" class="form-control" placeholder="Enter Event Name">
                 </div>
 
                 <div class ="form-group">
-                    <label> Band Type </label>
-                    <input type ="text" name="band_type" class="form-control" placeholder="Enter Band Type">
+                    <label> Venue </label>
+                    <input type ="text" name="place" class="form-control" placeholder="Enter the Venue">
                 </div>
 
                 <div class ="form-group">
-                    <label> Socials </label>
-                    <input type ="text" name="ig_links" class="form-control" placeholder="Enter Social Media Links">
+                    <label> Date </label>
+                    <input type ="text" name="date" class="form-control" placeholder="Enter the Date">
                 </div>
 
       </div>
@@ -70,28 +70,30 @@ $result = mysqli_query($con,$query)
         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Artist Data</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="../config/updatedata.php"  method="POST">
+      <form action="../config/updatevenuedata.php"  method="POST">
       <div class="modal-body">
         <!-- Forms -->
-                <div class ="form-group">
-                    <label> Artist ID </label>
-                    <input type ="text" name="artist_id" id="artist_id" class="form-control" placeholder="Enter Artist ID">
+            
+        <div class ="form-group">
+                    <label> Gig ID </label>
+                    <input type ="text" name="gig_id" id ="gig_id" class="form-control" placeholder="Enter Gig ID">
                 </div>
                 
                 <div class ="form-group">
-                    <label> Band Name </label>
-                    <input type ="text" name="band_name" id="band_name" class="form-control" placeholder="Enter Band Name">
+                    <label> Event Name </label>
+                    <input type ="text" name="gig_name" id ="gig_name" class="form-control" placeholder="Enter Event Name">
                 </div>
 
                 <div class ="form-group">
-                    <label> Band Type </label>
-                    <input type ="text" name="band_type" id="band_type" class="form-control" placeholder="Enter Band Type">
+                    <label> Venue </label>
+                    <input type ="text" name="place" id="place"  class="form-control" placeholder="Enter the Venue">
                 </div>
 
                 <div class ="form-group">
-                    <label> Socials </label>
-                    <input type ="text" name="ig_links" id="ig_links" class="form-control" placeholder="Enter Social Media Links">
+                    <label> Date </label>
+                    <input type ="text" name="date" id="date" class="form-control" placeholder="Enter the Date">
                 </div>
+
 
       </div>
 
@@ -114,7 +116,7 @@ $result = mysqli_query($con,$query)
         <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Artist Data</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="../config/deletedata.php"  method="POST">
+      <form action="../config/deletevenuedata.php"  method="POST">
       <div class="modal-body">
         <!-- Forms -->
             <input type ="hidden" name="delete_id" id="delete_id">
@@ -135,7 +137,7 @@ $result = mysqli_query($con,$query)
 
     <!-- Arist Dashboard -->
 	<header class="header text-center">
-		<a href="">   </a>
+		<a href=""></a>
 		<div class="addData">
             <!-- ADD DATA BUTTON -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#artistadddata">
@@ -154,15 +156,15 @@ $result = mysqli_query($con,$query)
             <div class ="col">
                 <div class ="card mt-5">
                     <div class = "card-header">
-                        <h2 class = "display-6 text-center">Artist Database</h2>
+                        <h2 class = "display-6 text-center">Gig Schedule</h2>
                     </div>
                     <div class ="card-body">
                         <table class = "table table-bordered text-center">
                             <tr class = "bg-dark text-white">
-                                <td>Artist Id</td>
-                                <td>Band Name</td>
-                                <td>Band Type</td>
-                                <td>Socials</td>
+                                <td>Gig Id</td>
+                                <td>Event Name</td>
+                                <td>Venue</td>
+                                <td>Date</td>
                                 <td>Edit</td>
                                 <td>Delete</td>
                             </tr>
@@ -173,10 +175,10 @@ $result = mysqli_query($con,$query)
                                 while($row = mysqli_fetch_assoc($result))
                                 {
                             ?> 
-                                <td><?php echo $row['artist_id']?></td>
-                                <td><?php echo $row['band_name']?></td>
-                                <td><?php echo $row['band_type']?></td>
-                                <td><?php echo $row['ig_links']?></td>
+                                <td><?php echo $row['gig_id']?></td>
+                                <td><?php echo $row['gig_name']?></td>
+                                <td><?php echo $row['place']?></td>
+                                <td><?php echo $row['date']?></td>
                                 <td><button type ="button" class="btn btn-success editbutton">EDIT</button></td>
                                 <td><button type = "button" class="btn btn-danger delbutton">DELETE</button></td>
                             </tr>
@@ -214,10 +216,10 @@ $(document).ready(function(){
 
             console.log(data);
 
-            $('#artist_id').val(data[0]);
-            $('#band_name').val(data[1]);
-            $('#band_type').val(data[2]);
-            $('#ig_links').val(data[3]); 
+            $('#gig_id').val(data[0]);
+            $('#gig_name').val(data[1]);
+            $('#place').val(data[2]);
+            $('#date').val(data[3]); 
     });  
 });
 </script>
