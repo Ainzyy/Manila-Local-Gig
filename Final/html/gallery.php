@@ -2,7 +2,7 @@
   $title = "Gallery";
   $page = 'gallery';
   $style = '../css/gallery.css';
-  $script = '../javascript/gallery.js';
+  $script = 'gallery';
   include_once('../assets/php/nav.php');
 ?>
 <!-- STARTING CONTENTS -->

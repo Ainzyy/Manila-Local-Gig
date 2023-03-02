@@ -20,8 +20,7 @@
       <p><?php echo $row['band_type']; ?></p>
       <p><?php echo $row['descript']; ?></p>
       <div class="socials">
-      <button class="facebook"><i class="fab fa-facebook-f"></i></button>
-            <button class="instagram"><a href="<?php echo $row['ig_links']; ?>"><i class="fab fa-instagram"></i></a></button>
+          <button class="instagram"><a href="<?php echo $row['ig_links']; ?>"><i class="fab fa-instagram"></i></a></button>
       </div>
     </div>
   <?php endwhile; ?>
