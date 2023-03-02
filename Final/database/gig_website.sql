@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2023 at 08:16 AM
+-- Generation Time: Mar 02, 2023 at 02:14 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -34,6 +34,19 @@ CREATE TABLE `artist_data` (
   `ig_links` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `artist_data`
+--
+
+INSERT INTO `artist_data` (`artist_id`, `band_name`, `band_type`, `ig_links`) VALUES
+(1, 'Clara Benin', 'Indie', '@clarabeninmusic'),
+(2, 'Gabba Santiago', 'Indie', '@gabbabeninmusic'),
+(3, 'Banna Harbera', 'Band', 'bannabeninmusic'),
+(4, 'Munimuni', 'Folk', '@munibeninmusic'),
+(5, 'Ang Bandang Shirley', 'Band', '@shirlebeninmusic'),
+(6, 'Parokya ni Edgar', 'Opm', '@parokyabeninmusic'),
+(7, 'One Click Straight', 'Rock', '@ocsbeninmusic');
+
 -- --------------------------------------------------------
 
 --
@@ -62,6 +75,22 @@ ALTER TABLE `artist_data`
 --
 ALTER TABLE `schedule`
   ADD PRIMARY KEY (`gig_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `artist_data`
+--
+ALTER TABLE `artist_data`
+  MODIFY `artist_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `schedule`
+--
+ALTER TABLE `schedule`
+  MODIFY `gig_id` int(255) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
