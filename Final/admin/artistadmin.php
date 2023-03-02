@@ -73,10 +73,6 @@ $result = mysqli_query($con,$query)
       <form action="../config/updatedata.php"  method="POST">
       <div class="modal-body">
         <!-- Forms -->
-
-
-                <input type="hidden" name="update_id" id="update_id">
-
                 <div class ="form-group">
                     <label> Artist ID </label>
                     <input type ="text" name="artist_id" id="artist_id" class="form-control" placeholder="Enter Artist ID">
@@ -175,30 +171,27 @@ $result = mysqli_query($con,$query)
 
 <!-- edit script -->
 <script>
-    $(document).ready(function(){
-        $('.editbutton').on('click',function() {
+$(document).ready(function(){
+    $('.editbutton').on('click',function() {
 
 
-            $('#editdata').modal('show');
+        $('#editdata').modal('show');
 
-                $tr = $tr.children("td");
+            $tr = $(this).closest('tr');
 
-                var data = $tr.children("td").map(function() {
-                    return $(this).text();
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
 
-                }).get();
+            }).get();
 
-                console.log(data);
+            console.log(data);
 
-                $('#update_id').val(data[0]);
-                $('#artist_id').val(data[1]);
-                $('#band_name').val(data[2]);
-                $('#band_type').val(data[3]);
-                $('#ig_links').val(data[4]); 
-    
-        }); 
-        
-    });
+            $('#artist_id').val(data[0]);
+            $('#band_name').val(data[1]);
+            $('#band_type').val(data[2]);
+            $('#ig_links').val(data[3]); 
+    });  
+});
 </script>
 
 </body>
