@@ -1,8 +1,6 @@
 <?php
   $title = "Gallery";
-  $page = 'gallery';
-  $style = '../css/gallery.css';
-  $script = 'gallery';
+  $page = $style = $script = 'gallery';
   include_once('../assets/php/nav.php');
 ?>
 <!-- STARTING CONTENTS -->

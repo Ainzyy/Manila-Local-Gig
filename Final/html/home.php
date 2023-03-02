@@ -1,8 +1,7 @@
 <?php
   $title = "Home";
-  $page = 'index';
-  $style = '../css/style.css';
-  $script = '../javascript/script.js';
+  $page = $style = 'home';
+  $script = 'script';
   include_once('../assets/php/nav.php');
 ?>
         <!-- BANNER -->
@@ -29,13 +28,14 @@
 
 
         <!-- FEATURED -->
+        
         <section class="featured">
-            <h1>FEATURED</h1>
-                <!--image card layout start-->
+            <!-- <h1>FEATURED</h1>
+                
         <div class="container">
-            <!--image row start-->
+            
             <div class="row">
-              <!--image card start-->
+              
               <div class="image">
                 <img src="../images/0.jpg" alt="">
                 <div class="details">
@@ -50,8 +50,8 @@
                   </div>
                 </div>
               </div>
-              <!--image card end-->
-              <!--image card start-->
+              
+              
               <div class="image">
                 <img src="../images/0.jpg" alt="">
                 <div class="details">
@@ -66,8 +66,8 @@
                   </div>
                 </div>
               </div>
-              <!--image card end-->
-              <!--image card start-->
+              
+              
               <div class="image">
                 <img src="../images/0.jpg" alt="">
                 <div class="details">
@@ -82,12 +82,12 @@
                   </div>
                 </div>
               </div>
-              <!--image card end-->
+              
             </div>
-            <!--image row end-->
-            <!--image row start-->
+            
+            
             <div class="row">
-                <!--image card start-->
+                
                 <div class="image">
                   <img src="../images/ClaraBenin.jpg" alt="">
                   <div class="details">
@@ -102,8 +102,8 @@
                     </div>
                   </div>
                 </div>
-                <!--image card end-->
-                <!--image card start-->
+                
+                
                 <div class="image">
                   <img src="../images/GabbaSantiago.jpg" alt="">
                   <div class="details">
@@ -118,8 +118,8 @@
                     </div>
                   </div>
                 </div>
-                <!--image card end-->
-                <!--image card start-->
+                
+                
                 <div class="image">
                   <img src="../images/0.jpg" alt="">
                   <div class="details">
@@ -134,12 +134,12 @@
                     </div>
                   </div>
                 </div>
-                <!--image card end-->
+                
               </div>
-              <!--image row end-->
-              <!--image row start-->
+              
+              
             <div class="row">
-              <!--image card start-->
+              
               <div class="image">
                 <img src="../images/ClaraBenin.jpg" alt="">
                 <div class="details">
@@ -154,8 +154,8 @@
                   </div>
                 </div>
               </div>
-              <!--image card end-->
-              <!--image card start-->
+              
+              
               <div class="image">
                 <img src="../images/GabbaSantiago.jpg" alt="">
                 <div class="details">
@@ -170,8 +170,8 @@
                   </div>
                 </div>
               </div>
-              <!--image card end-->
-              <!--image card start-->
+              
+              
               <div class="image">
                 <img src="../images/0.jpg" alt="">
                 <div class="details">
@@ -186,9 +186,59 @@
                   </div>
                 </div>
               </div>
-              <!--image card end-->
+              
+            </div> -->
+            <div class="container">
+
+            <h1 class="heading">FEATURED</h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <img src="image/icon-1.png" alt="">
+                    <h3>HTML 5</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+                    <a href="#" class="btn">Follow</a>
+                </div>
+
+                <div class="box">
+                    <img src="image/icon-2.png" alt="">
+                    <h3>CSS 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+
+                <div class="box">
+                    <img src="image/icon-3.png" alt="">
+                    <h3>JavaScript</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+
+                <div class="box">
+                    <img src="image/icon-4.png" alt="">
+                    <h3>SASS</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+
+                <div class="box">
+                    <img src="image/icon-5.png" alt="">
+                    <h3>JQuery</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+
+                <div class="box">
+                    <img src="image/icon-6.png" alt="">
+                    <h3>React.js</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+
             </div>
-            <!--image row end-->
+
+        </div>
         </section>
 
 

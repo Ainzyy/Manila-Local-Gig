@@ -1,7 +1,6 @@
 <?php
-  $title = "Index";
-  $page = 'index';
-  $style = '../css/artist.css';
+  $title = "Artists";
+  $page = $style = 'artist';
   $script = '';
   include_once('../assets/php/nav.php');
   require_once('../config/admindb.php');

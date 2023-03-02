@@ -1,7 +1,6 @@
 <?php
   $title = "Gigs";
-  $page = $script = 'gigs';
-  $style = '../css/gigs.css';
+  $page = $script = $style = 'gigs';
   include_once('../assets/php/nav.php');
   require_once('../config/admindb.php');
   $query = "select * from schedule";

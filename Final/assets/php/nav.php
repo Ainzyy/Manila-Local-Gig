@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php echo $title; ?> | Manila Local Gigs</title>
         <script src="../javascript/script.js"></script>
-        <link rel="stylesheet" href="<?php echo $style; ?>">
+        <link rel="stylesheet" href="../css/navfooter.css">
+        <link rel="stylesheet" href="../css/<?php echo $style; ?>.css">
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,13 +23,13 @@
         <section class="header">
           <!-- NAVIGATION BAR -->
             <nav>
-                <a href="index.php">
+                <a href="home.php">
                     <img src="../images/MeDrawing.png" alt="">
                 </a>
                 <div class="nav-links">
                     <i class="fa fa-times-circle" aria-hidden="true" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="index.php">HOME</a></li>
+                        <li><a href="home.php">HOME</a></li>
                         <li><a href="artist.php">ARTIST</a></li>
                         <li><a href="gigs.php">GIGS</a></li>
                         <li><a href="gallery.php">GALLERY</a></li>
