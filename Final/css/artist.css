@@ -11,11 +11,11 @@
 }
 
 
-  .card {
+.card {
     position: relative;
     width: 300px;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 1rem;
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
     padding: 16px;
     margin:  56px 24px;
@@ -23,6 +23,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
 
 .card-image {
@@ -41,6 +45,10 @@
 .card-image img {
     width: 100%;
     transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 p {
