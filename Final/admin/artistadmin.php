@@ -1,20 +1,18 @@
 <?php 
 
-require_once('config/admindb.php');
+require_once('../config/admindb.php');
 $query = "select * from artist_data";
 $result = mysqli_query($con,$query)
 
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Admin Dashboard</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
@@ -32,7 +30,7 @@ $result = mysqli_query($con,$query)
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Artist</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="adddata.php"  method="POST">
+      <form action="../config/adddata.php"  method="POST">
       <div class="modal-body">
         <!-- Forms -->
             
@@ -72,7 +70,6 @@ $result = mysqli_query($con,$query)
 	<header class="header text-center">
 		<a href="">Artist Dashboard</a>
 		<div class="addData">
-
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#artistadddata">
                     ADD DATA
                 </button>

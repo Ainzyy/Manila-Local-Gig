@@ -17,7 +17,7 @@ if(isset($_POST['insertdata']))
 
     if($query_run){
         echo '<script> alert("Data Saved");</script>';
-        header('Location: artistadmin.php');
+        header('Location: ../admin/artistadmin.php');
     }
     else{
         echo '<script> alert("Data Not Saved");</script>';
