@@ -194,7 +194,7 @@
 
         <!-- GALLERY -->
 
-        <section class="gallery">
+        <section class="galleryHome">
           <h1>GALLERY</h1>
             <div class="image-grid">
               <img class="image-grid-col-2 image-grid-row-2" src="../images/5.jpg" alt="architecture">

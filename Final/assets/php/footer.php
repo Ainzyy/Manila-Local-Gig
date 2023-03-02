@@ -8,7 +8,7 @@
           </div>
           <p>Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Ain & James</p>
         </section>
-        <script src="<?php echo $script;?>"></script>
+        <script src="../javascript/<?php echo $script;?>.js"></script>
         <script src="../javascript/lightbox-plus-jquery.js"></script>
     </body>
 </html>

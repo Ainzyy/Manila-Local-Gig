@@ -37,7 +37,8 @@
 }
 .gallery .gallery-items .item.show{
 	display: block;
-	animation: show .5s ease;
+	animation: show 1s ease;
+	-webkit-animation: show 1s ease;
 }
 @keyframes show{
     0%{

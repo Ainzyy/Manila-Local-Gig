@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
     const newItemActive = itemsArray[toIndex];
  
     // start transition
-    newItemActive.classList.add("carousel_item__pos_next");
+
     setTimeout(() => {
        newItemActive.classList.add("carousel_item__next");
        itemActive.classList.add("carousel_item__next");
