@@ -12,8 +12,10 @@ if(isset($_POST['insertdata']))
     $band_name = $_POST['band_name'];
     $band_type = $_POST['band_type'];
     $ig_links = $_POST['ig_links'];
+    $image_url = $_POST['image_url'];
+    $descript = $_POST['descript'];
 
-    $query ="INSERT INTO artist_data (`artist_id`,`band_name`,`band_type`,`ig_links`) VALUES ('$artist_id','$band_name','$band_type','$ig_links')";
+    $query ="INSERT INTO artist_data (`artist_id`,`band_name`,`band_type`,`ig_links`,`image_url`,`descript`) VALUES ('$artist_id','$band_name','$band_type','$ig_links','$image_url', '$descript')";
     $query_run = mysqli_query($connection, $query);
 
     if($query_run){

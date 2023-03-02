@@ -13,8 +13,10 @@ if(isset($_POST['updatedata']))
     $band_name = $_POST['band_name'];
     $band_type = $_POST['band_type'];
     $ig_links = $_POST['ig_links'];
+    $image_url = $_POST['image_url'];
+    $descript = $_POST['descript'];
 
-    $query ="UPDATE artist_data SET artist_id ='$artist_id', band_name = '$band_name', band_type= '$band_type', ig_links = '$ig_links' WHERE artist_id='$artist_id' ";
+    $query ="UPDATE artist_data SET artist_id ='$artist_id', band_name = '$band_name', band_type= '$band_type', ig_links = '$ig_links', image_url ='$image_url', descript='$descript' WHERE artist_id='$artist_id' ";
     $query_run = mysqli_query($connection, $query);
 
     if($query_run)

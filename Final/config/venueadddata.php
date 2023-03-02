@@ -12,8 +12,10 @@ if(isset($_POST['insertdata']))
     $gig_name = $_POST['gig_name'];
     $place = $_POST['place'];
     $date = $_POST['date'];
+    $gig_image_url = $_POST['gig_image_url'];
+    $gig_desc = $_POST['gig_desc'];
 
-    $query ="INSERT INTO schedule (`gig_id`,`gig_name`,`place`,`date`) VALUES ('$gig_id','$gig_name','$place','$date')";
+    $query ="INSERT INTO schedule (`gig_id`,`gig_name`,`place`,`date`,`gig_image_url`,`gig_desc`) VALUES ('$gig_id','$gig_name','$place','$date','$gig_image_url','$gig_desc')";
     $query_run = mysqli_query($connection, $query);
 
     if($query_run){

@@ -48,6 +48,15 @@ $result = mysqli_query($con,$query)
                     <label> Socials </label>
                     <input type ="text" name="ig_links" class="form-control" placeholder="Enter Social Media Links">
                 </div>
+                <div class ="form-group">
+                    <label> Image </label>
+                    <input type ="text" name="image_url" class="form-control" placeholder="ONLY USE IMAGE URL">
+                </div>
+                <div class ="form-group">
+                    <label> Description </label>
+                    <input type ="text" name="descript" class="form-control" placeholder="Short Description about the Artist">
+                </div>
+
 
       </div>
 
@@ -91,6 +100,14 @@ $result = mysqli_query($con,$query)
                 <div class ="form-group">
                     <label> Socials </label>
                     <input type ="text" name="ig_links" id="ig_links" class="form-control" placeholder="Enter Social Media Links">
+                </div>
+                <div class ="form-group">
+                    <label> Image </label>
+                    <input type ="text" name="image_url" id="image_url" class="form-control" placeholder="ONLY USE IMAGE URL">
+                </div>
+                <div class ="form-group">
+                    <label> Description </label>
+                    <input type ="text" name="descript" id="descript" class="form-control" placeholder="Short Description about the Artist">
                 </div>
 
       </div>
@@ -163,6 +180,8 @@ $result = mysqli_query($con,$query)
                                 <td>Band Name</td>
                                 <td>Band Type</td>
                                 <td>Socials</td>
+                                <td>Image URL</td>
+                                <td>Description</td>
                                 <td>Edit</td>
                                 <td>Delete</td>
                             </tr>
@@ -177,6 +196,8 @@ $result = mysqli_query($con,$query)
                                 <td><?php echo $row['band_name']?></td>
                                 <td><?php echo $row['band_type']?></td>
                                 <td><?php echo $row['ig_links']?></td>
+                                <td><?php echo $row['image_url']?></td>
+                                <td><?php echo $row['descript']?></td>
                                 <td><button type ="button" class="btn btn-success editbutton">EDIT</button></td>
                                 <td><button type = "button" class="btn btn-danger delbutton">DELETE</button></td>
                             </tr>
@@ -218,6 +239,9 @@ $(document).ready(function(){
             $('#band_name').val(data[1]);
             $('#band_type').val(data[2]);
             $('#ig_links').val(data[3]); 
+            $('#image_url').val(data[4]);
+            $('#descript').val(data[5]);  
+
     });  
 });
 </script>

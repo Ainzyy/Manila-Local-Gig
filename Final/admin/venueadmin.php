@@ -48,6 +48,14 @@ $result = mysqli_query($con,$query)
                     <label> Date </label>
                     <input type ="text" name="date" class="form-control" placeholder="Enter the Date">
                 </div>
+                <div class ="form-group">
+                    <label> Gig Photo </label>
+                    <input type ="text" name="gig_image_url" class="form-control" placeholder="USE ONLY IMAGE URL">
+                </div>
+                <div class ="form-group">
+                    <label> Description </label>
+                    <input type ="text" name="gig_desc" class="form-control" placeholder="Small gig Description">
+                </div>
 
       </div>
 
@@ -92,6 +100,14 @@ $result = mysqli_query($con,$query)
                 <div class ="form-group">
                     <label> Date </label>
                     <input type ="text" name="date" id="date" class="form-control" placeholder="Enter the Date">
+                </div>
+                <div class ="form-group">
+                    <label> Gig Photo </label>
+                    <input type ="text" name="gig_image_url" id="gig_image_url" class="form-control" placeholder="USE ONLY IMAGE URL">
+                </div>
+                <div class ="form-group">
+                    <label> Description </label>
+                    <input type ="text" name="gig_desc" id="gig_desc" class="form-control" placeholder="Small gig Description">
                 </div>
 
 
@@ -165,6 +181,8 @@ $result = mysqli_query($con,$query)
                                 <td>Event Name</td>
                                 <td>Venue</td>
                                 <td>Date</td>
+                                <td>Image URL</td>
+                                <td>Description</td>
                                 <td>Edit</td>
                                 <td>Delete</td>
                             </tr>
@@ -179,6 +197,8 @@ $result = mysqli_query($con,$query)
                                 <td><?php echo $row['gig_name']?></td>
                                 <td><?php echo $row['place']?></td>
                                 <td><?php echo $row['date']?></td>
+                                <td><?php echo $row['gig_image_url']?></td>
+                                <td><?php echo $row['gig_desc']?></td>
                                 <td><button type ="button" class="btn btn-success editbutton">EDIT</button></td>
                                 <td><button type = "button" class="btn btn-danger delbutton">DELETE</button></td>
                             </tr>
@@ -220,6 +240,8 @@ $(document).ready(function(){
             $('#gig_name').val(data[1]);
             $('#place').val(data[2]);
             $('#date').val(data[3]); 
+            $('#gig_image_url').val(data[4]); 
+            $('#gig_desc').val(data[5]); 
     });  
 });
 </script>

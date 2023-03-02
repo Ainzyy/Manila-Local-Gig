@@ -4,49 +4,28 @@
   $style = '../css/artist.css';
   $script = '';
   include_once('../assets/php/nav.php');
-?>
-<!-- START CONTENTS -->
-
-      <!-- MAIN CONTEMT -->
-      <section class="artist">
-        <div class="card">
-        <div class="card-image">
-            <img src="../images/ClaraBenin.jpg" alt="Profile image">
-        </div>
-        <p class="name">Clara Benin</p>
-        <p>Musician, Singer</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus, mollitia tenetur libero quam recusandae alias in incidunt.</p>
-        <div class="socials">
-            <button class="facebook"><i class="fab fa-facebook-f"></i></button>
-            <button class="instagram"><i class="fab fa-instagram"></i></button>
-        </div>
-        </div>
-        <div class="card">
-            <div class="card-image">
-                <img src="../images/ClaraBenin.jpg" alt="Profile image">
-            </div>
-            <p class="name">Clara Benin</p>
-            <p>Musician, Singer</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus, mollitia tenetur libero quam recusandae alias in incidunt.</p>
-            <div class="socials">
-            <button class="facebook"><i class="fab fa-facebook-f"></i></button>
-            <button class="instagram"><i class="fab fa-instagram"></i></button>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-image">
-                <img src="../images/ClaraBenin.jpg" alt="Profile image">
-            </div>
-            <p class="name">Clara Benin</p>
-            <p>Musician, Singer</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus, mollitia tenetur libero quam recusandae alias in incidunt.</p>
-            <div class="socials">
-            <button class="facebook"><i class="fab fa-facebook-f"></i></button>
-            <button class="instagram"><i class="fab fa-instagram"></i></button>
-            </div>
-        </div>
-      </section>
-
+  require_once('../config/admindb.php');
+ $query = "select * from artist_data";
+ $result = mysqli_query($con,$query); 
+  
+ ?>
+<!-- While Loop -->
+ <section class ="artist">
+  <?php while($row = mysqli_fetch_array($result)): ?>
+    <div class="card">
+      <div class="card-image">
+        <img src="<?php echo $row['image_url']; ?>" alt="Profile image">
+      </div>
+      <p class="name"><?php echo $row['band_name']; ?></p>
+      <p><?php echo $row['band_type']; ?></p>
+      <p><?php echo $row['descript']; ?></p>
+      <div class="socials">
+      <button class="facebook"><i class="fab fa-facebook-f"></i></button>
+            <button class="instagram"><a href="<?php echo $row['ig_links']; ?>"><i class="fab fa-instagram"></i></a></button>
+      </div>
+    </div>
+  <?php endwhile; ?>
+  </section>
 
 <!-- END CONTENTS -->
 <?php
