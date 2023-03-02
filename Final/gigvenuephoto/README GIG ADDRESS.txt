@@ -11,3 +11,11 @@ jess and pats - f, 2, 63 Maginhawa, Quezon City, 1101 Metro Manila
 Saguijo - 7612 Guijo, Village, Makati, 1203 Metro Manila
 
 Social House - LC121 to LC 123 Circuit Lane, Circuit Makati AP Reyes Street, Makati, Metro Manila
+
+
+
+
+****Need pa****
+Interface from Home page to admin pages
+Database(pwedeng new) for gig venue with dropdown feature
+Homepage random first 9 artist
