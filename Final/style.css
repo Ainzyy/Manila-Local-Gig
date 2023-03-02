@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 body{
-	height: 100vh;
-	background: #e6e7e2;
+  height: 100vh;
+  background: #e6e7e2;
 }
 .header{
     min-width: 100vh;
@@ -55,6 +55,9 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
+
+/* ---- BANNER ---- */
+
 /* carousel */
 .carousel_inner{
     width: 100%;
@@ -180,10 +183,10 @@ nav img{
 
  /* FEATURED */
 .featured{
-   width: 80%;
+   width: 100%;
    margin: auto;
    text-align: center;
-   padding-top: 100px;
+   padding-top: 80px;
 
 }
 h1{
@@ -240,6 +243,8 @@ h1{
    -o-border-radius: 6px;
    padding: 3px 6px;
 }
+
+/* ---- FEATURED ---- */
 .container{
 	margin: 30px;
 }
@@ -374,4 +379,123 @@ h1{
 	.more .follow, .more .icon-links a i{
 		font-size: 18px;
 	}
+}
+
+/* ---- GALLERY ---- */
+.gallery{
+   background-color: #50A7FF;
+   width: 100%;
+   margin: auto;
+   text-align: center;
+   padding-top: 80px;
+   padding-bottom: 50px;
+
+}
+.image-grid {
+	--gap: 16px;
+	--num-cols: 4;
+	--row-height: 300px;
+
+	box-sizing: border-box;
+	padding: var(--gap);
+
+	display: grid;
+	grid-template-columns: repeat(var(--num-cols), 1fr);
+	grid-auto-rows: var(--row-height);
+	gap: var(--gap);
+}
+
+.image-grid>img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image-grid-col-2 {
+	grid-column: span 2;
+}
+
+.image-grid-row-2 {
+	grid-row: span 2;
+}
+
+/* Anything udner 1024px */
+@media screen and (max-width: 1024px) {
+	.image-grid {
+		--num-cols: 2;
+		--row-height: 200px;
+	}
+}
+
+.MoreGallery{
+   color: #000;
+   text-decoration: none;
+   font-size: 20px;
+   font-weight: 500;
+   text-transform: uppercase;
+}
+.MoreGallery a{
+   color: black;
+   text-decoration: none;
+   font-size: 13px;
+}
+
+/* ---- CALL TO ACTION ---- */
+.cta{
+   margin: 100x auto;
+   width: 100%;
+   background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(images/Rakrakan.png);
+   background-position: center;
+   background-size: cover;
+   text-align: center;
+   padding: 100px 0;
+}
+.cta h1{
+   color: #dadada;
+   margin-bottom: 40px;
+   padding: 0;
+}
+.hero-btn{
+   display: inline-block;
+   text-decoration: none;
+   color: #dadada;
+   border: 1px solid #dadada;
+   padding: 12px 34px;
+   font-size: 13px;
+   background: transparent;
+   position: relative;
+   cursor: pointer;
+}
+.hero-btn:hover{
+   border: 1px solid #272727;
+   background: #272727;
+   transition: 1s;
+   -webkit-transition: 1s;
+   -moz-transition: 1s;
+   -ms-transition: 1s;
+   -o-transition: 1s;
+}
+
+/* ---- FOOTER ---- */
+.footer{
+   width: 100%;
+   text-align: center;
+   padding: 30px 0;
+}
+
+.footer h4{
+   margin-bottom: 25px;
+   margin-top: 20px;
+   font-weight: 600;
+}
+
+.icons .fa{
+   color: #272727;
+   margin: 0 13px;
+   cursor: pointer;
+   padding: 18px 0;
+}
+
+.fa-heart-o{
+   
 }

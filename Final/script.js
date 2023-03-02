@@ -48,3 +48,5 @@ window.addEventListener("load", () => {
    function hideMenu(){
       navLinks.style.display = "-5";
    }
+
+// SLIDER
