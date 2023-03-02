@@ -4,8 +4,7 @@
   $style = '../css/artist.css';
   include_once('../assets/php/nav.php');
 ?>
-<!-- STARTING CONTENTS -->
-
+<!-- START CONTENTS -->
 
       <!-- MAIN CONTEMT -->
       <section class="artist">
@@ -21,7 +20,6 @@
             <button class="instagram"><i class="fab fa-instagram"></i></button>
         </div>
         </div>
-
         <div class="card">
             <div class="card-image">
                 <img src="../images/ClaraBenin.jpg" alt="Profile image">
@@ -34,7 +32,6 @@
             <button class="instagram"><i class="fab fa-instagram"></i></button>
             </div>
         </div>
-
         <div class="card">
             <div class="card-image">
                 <img src="../images/ClaraBenin.jpg" alt="Profile image">
@@ -50,9 +47,7 @@
       </section>
 
 
-
-
-<!-- ENDING CONTENTS -->
+<!-- END CONTENTS -->
 <?php
     include_once('../assets/php/footer.php');
 ?>

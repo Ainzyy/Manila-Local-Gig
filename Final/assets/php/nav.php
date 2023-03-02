@@ -25,9 +25,9 @@
                     <ul>
                         <li><a href="index.php">HOME</a></li>
                         <li><a href="artist.php">ARTIST</a></li>
-                        <li><a href="#gigs">GIGS</a></li>
-                        <li><a href="#venues">VENUES</a></li>
-                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="gigs.php">GIGS</a></li>
+                        <li><a href="venues.php">VENUES</a></li>
+                        <li><a href="gallery.php">GALLERY</a></li>
                         <li><a href="#contact">CONTACT</a></li>
                         <li><a href="#about">ABOUT</a></li>
                     </ul>

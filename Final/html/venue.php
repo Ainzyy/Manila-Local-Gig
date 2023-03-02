@@ -1,13 +1,16 @@
 <?php
-  $title = "Index";
-  $page = 'index';
-  $style = '../css/style.css';
+  $title = "Venue";
+  $page = 'venue';
+  $style = '../css/venue.css';
   include_once('../assets/php/nav.php');
 ?>
 <!-- STARTING CONTENTS -->
 
 <!-- MAIN CONTENTS -->
+<section class="venue">
 
+
+</section>
 
 
 <!-- ENDING CONTENTS -->
