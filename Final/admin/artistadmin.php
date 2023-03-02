@@ -1,15 +1,14 @@
 <?php 
-
+// Connect to database
 require_once('../config/admindb.php');
 $query = "select * from artist_data";
 $result = mysqli_query($con,$query)
-
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Use with Internet if possible for the best UI experience -->
 	<meta charset="utf-8">
 	<title>Admin Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
@@ -70,6 +69,7 @@ $result = mysqli_query($con,$query)
 	<header class="header text-center">
 		<a href="">Artist Dashboard</a>
 		<div class="addData">
+            <!-- ADD DATA BUTTON -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#artistadddata">
                     ADD DATA
                 </button>
@@ -99,10 +99,12 @@ $result = mysqli_query($con,$query)
                                 <td>Delete</td>
                             </tr>
                             <tr>
-                            <?php                               
+                                <!-- While Loop for proper data ingest scaling -->
+                            <?php                
+                                           
                                 while($row = mysqli_fetch_assoc($result))
                                 {
-                            ?>
+                            ?> 
                                 <td><?php echo $row['artist_id']?></td>
                                 <td><?php echo $row['band_name']?></td>
                                 <td><?php echo $row['band_type']?></td>
