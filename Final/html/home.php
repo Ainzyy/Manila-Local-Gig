@@ -3,6 +3,9 @@
   $page = $style = 'home';
   $script = 'script';
   include_once('../assets/php/nav.php');
+  require_once('../config/admindb.php');
+  $query = "select * from artist_data ORDER BY RAND() LIMIT 4";
+  $result = mysqli_query($con,$query); 
 ?>
         <!-- BANNER -->
         <section class="banner">
@@ -30,212 +33,19 @@
         <!-- FEATURED -->
         
         <section class="featured">
-            <!-- <h1>FEATURED</h1>
-                
-        <div class="container">
-            
-            <div class="row">
-              
-              <div class="image">
-                <img src="../images/0.jpg" alt="">
-                <div class="details">
-                  <h2><span>ARTIST 1</span></h2>
-                  <p>Band</p>
-                  <div class="more">
-                    <a href="#" class="follow">Follow</a>
-                    <div class="icon-links">
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              
-              <div class="image">
-                <img src="../images/0.jpg" alt="">
-                <div class="details">
-                  <h2><span>ARTIST 1</span></h2>
-                  <p>Band</p>
-                  <div class="more">
-                    <a href="#" class="follow">Follow</a>
-                    <div class="icon-links">
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              
-              <div class="image">
-                <img src="../images/0.jpg" alt="">
-                <div class="details">
-                  <h2><span>ARTIST 1</span></h2>
-                  <p>Band</p>
-                  <div class="more">
-                    <a href="#" class="follow">Follow</a>
-                    <div class="icon-links">
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-            
-            
-            <div class="row">
-                
-                <div class="image">
-                  <img src="../images/ClaraBenin.jpg" alt="">
-                  <div class="details">
-                    <h2><span>ARTIST 1</span></h2>
-                    <p>Band</p>
-                    <div class="more">
-                      <a href="#" class="follow">Follow</a>
-                      <div class="icon-links">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                
-                <div class="image">
-                  <img src="../images/GabbaSantiago.jpg" alt="">
-                  <div class="details">
-                    <h2><span>ARTIST 1</span></h2>
-                    <p>Band</p>
-                    <div class="more">
-                      <a href="#" class="follow">Follow</a>
-                      <div class="icon-links">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                
-                <div class="image">
-                  <img src="../images/0.jpg" alt="">
-                  <div class="details">
-                    <h2><span>ARTIST 1</span></h2>
-                    <p>Band</p>
-                    <div class="more">
-                      <a href="#" class="follow">Follow</a>
-                      <div class="icon-links">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-              
-              
-            <div class="row">
-              
-              <div class="image">
-                <img src="../images/ClaraBenin.jpg" alt="">
-                <div class="details">
-                  <h2><span>ARTIST 1</span></h2>
-                  <p>Band</p>
-                  <div class="more">
-                    <a href="#" class="follow">Follow</a>
-                    <div class="icon-links">
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              
-              <div class="image">
-                <img src="../images/GabbaSantiago.jpg" alt="">
-                <div class="details">
-                  <h2><span>ARTIST 1</span></h2>
-                  <p>Band</p>
-                  <div class="more">
-                    <a href="#" class="follow">Follow</a>
-                    <div class="icon-links">
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              
-              <div class="image">
-                <img src="../images/0.jpg" alt="">
-                <div class="details">
-                  <h2><span>ARTIST 1</span></h2>
-                  <p>Band</p>
-                  <div class="more">
-                    <a href="#" class="follow">Follow</a>
-                    <div class="icon-links">
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-            </div> -->
             <div class="container">
 
             <h1 class="heading">FEATURED</h1>
 
             <div class="box-container">
-
+              <?php while($row = mysqli_fetch_array($result)): ?>
                 <div class="box">
-                    <img src="image/icon-1.png" alt="">
-                    <h3>HTML 5</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
-                    <a href="#" class="btn">Follow</a>
+                    <img src="<?php echo $row['image_url']; ?>" alt="">
+                    <h3><?php echo $row['band_name']; ?></h3>
+                    <p><?php echo $row['descript']; ?></p>
+                    <a href="<?php echo $row['ig_links']; ?>" class="btn">Follow</a>
                 </div>
-
-                <div class="box">
-                    <img src="image/icon-2.png" alt="">
-                    <h3>CSS 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
-
-                <div class="box">
-                    <img src="image/icon-3.png" alt="">
-                    <h3>JavaScript</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
-
-                <div class="box">
-                    <img src="image/icon-4.png" alt="">
-                    <h3>SASS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
-
-                <div class="box">
-                    <img src="image/icon-5.png" alt="">
-                    <h3>JQuery</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
-
-                <div class="box">
-                    <img src="image/icon-6.png" alt="">
-                    <h3>React.js</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
-
+                <?php endwhile; ?>
             </div>
 
         </div>
