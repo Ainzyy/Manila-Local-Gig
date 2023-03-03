@@ -4,7 +4,7 @@
   $script = 'script';
   include_once('../assets/php/nav.php');
   require_once('../config/admindb.php');
-  $query = "select * from artist_data ORDER BY RAND() LIMIT 4";
+  $query = "select * from artist_data ORDER BY RAND() LIMIT 3";
   $result = mysqli_query($con,$query); 
 ?>
         <!-- BANNER -->

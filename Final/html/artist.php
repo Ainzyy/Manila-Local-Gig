@@ -4,8 +4,8 @@
   $script = '';
   include_once('../assets/php/nav.php');
   require_once('../config/admindb.php');
- $query = "select * from artist_data";
- $result = mysqli_query($con,$query); 
+  $query = "select * from artist_data";
+  $result = mysqli_query($con,$query); 
   
  ?>
 <!-- While Loop -->
