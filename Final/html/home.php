@@ -13,17 +13,12 @@
             <div class="carousel_inner">
                <div class="carousel_item carousel_item__active">
                   <img src="../images/Rakrakan.png" alt="" class="carousel_img">
-                  <div class="carousel_caption">
-                     <h1 class="carousel_title">Banner</h1>
-                     <p class="carousel_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate
-                        corporis laudantium quae velit quam.</p>
-                  </div>
                </div>
                <div class="carousel_item">
-                  <img src="../images/rak.jpg" alt="" class="carousel_img">
+                  <img src="../images/TheDeck1.jpg" alt="" class="carousel_img">
                </div>
                <div class="carousel_item">
-                  <img src="../images/1.jpg" alt="" class="carousel_img">
+                  <img src="../images/TheDeck55.jpg" alt="" class="carousel_img">
                </div>
             </div>
           </div>
@@ -43,11 +38,12 @@
                     <img src="<?php echo $row['image_url']; ?>" alt="">
                     <h3><?php echo $row['band_name']; ?></h3>
                     <p><?php echo $row['descript']; ?></p>
-                    <a href="<?php echo $row['ig_links']; ?>" class="btn">Follow</a>
+                    <form action="<?php echo $row['ig_links']; ?>" target="_blank">
+          <button class="btn">Follow</button>
+          </form>
                 </div>
                 <?php endwhile; ?>
             </div>
-
         </div>
         </section>
 
@@ -57,11 +53,11 @@
         <section class="galleryHome">
           <h1>GALLERY</h1>
             <div class="image-grid">
-              <img class="image-grid-col-2 image-grid-row-2" src="../images/5.jpg" alt="architecture">
-              <img src="../images/5.jpg" alt="architecture">
-              <img src="../images/5.jpg" alt="architecture">
-              <img src="../images/5.jpg" alt="architecture">
-              <img src="../images/5.jpg" alt="architecture">
+              <img class="image-grid-col-2 image-grid-row-2" src="../images/TheDeck55.jpg" alt="architecture">
+              <img src="../images/TheDeck.jpg" alt="architecture">
+              <img src="../images/TheDeck1.jpg" alt="architecture">
+              <img src="../images/TheDeck2.jpg" alt="architecture">
+              <img src="../images/TheDeck3.jpg" alt="architecture">
             </div>
             <div class="MoreGallery">
               <a href="../html/gallery.php" class="More">More Photos</a>

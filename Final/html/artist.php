@@ -19,7 +19,9 @@
       <p><?php echo $row['band_type']; ?></p>
       <p><?php echo $row['descript']; ?></p>
       <div class="socials">
-          <button class="instagram"><a href="<?php echo $row['ig_links']; ?>"><i class="fab fa-instagram"></i></a></button>
+        <form action="<?php echo $row['ig_links']; ?>" target="_blank">
+          <button class="instagram"><i class="fab fa-instagram"></i></button>
+          </form>
       </div>
     </div>
   <?php endwhile; ?>
