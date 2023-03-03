@@ -33,7 +33,7 @@
                         <li><a href="artist.php">ARTIST</a></li>
                         <li><a href="gigs.php">GIGS</a></li>
                         <li><a href="gallery.php">GALLERY</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="contact.php">CONTACT</a></li>
                         <li><a href="#about">ABOUT</a></li>
                     </ul>
                 </div>

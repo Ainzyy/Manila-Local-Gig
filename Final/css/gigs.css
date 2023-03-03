@@ -8,10 +8,14 @@
 #map {
     height: 480px;
     width: 854px;
-    margin: 5rem auto;
+    margin: 2rem auto;
 }
-
-
+.manilaMap h1{
+    font-size: 42px;
+}
+.manilaMap p{
+    font-size: 16px;
+}
 /* ---- TABLE ---- */
 
 .table-container {

@@ -304,6 +304,9 @@ h1{
    text-align: center;
    padding: 100px  0;
 }
+cta a{
+   color: #272727;
+}
 .cta  h1{
    color:   #dadada;
    margin-bottom: 40px;
@@ -312,7 +315,6 @@ h1{
 .hero-btn{
    display: inline-block;
    text-decoration:  none;
-   color:   #dadada;
    border:  1px  solid   #dadada;
    padding: 12px   34px;
    font-size:  13px;

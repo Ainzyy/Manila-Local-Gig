@@ -48,6 +48,7 @@
     </main>
     <section class="manilaMap">
       <h1>Interactive Map</h1>
+      <p>Here are the famous marks for gigs.</p>
       <div id="map">
       </div>
     </section>

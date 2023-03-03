@@ -65,9 +65,11 @@
         </section>
 
         <!-- CALL TO ACTION -->
-        <section class="cta">
+        <section id="contact" class="cta">
           <h1>Promote Your Gigs</h1>
-          <a href="" class="hero-btn">Contact Us</a>
+          <form action="contact.php" target="_blank">
+          <button><a class="hero-btn">Contact Us</a></button>
+          </form>
         </section>
 
 
