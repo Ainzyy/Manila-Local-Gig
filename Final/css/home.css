@@ -44,8 +44,12 @@
    .carousel__fade   .carousel_item__next{
    transform:  none;
    opacity: 1;
-   transition: opacity   .5s   ease-in-out;
-   }
+   transition: opacity   1.5s   ease-in-out;
+   -webkit-transition: opacity   1.5s   ease-in-out;
+   -moz-transition: opacity   1.5s   ease-in-out;
+   -ms-transition: opacity   1.5s   ease-in-out;
+   -o-transition: opacity   1.5s   ease-in-out;
+}
    
    .carousel__fade   .carousel_item__active.carousel_item__next{
    opacity: 0;

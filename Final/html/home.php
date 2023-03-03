@@ -14,10 +14,10 @@
                <div class="carousel_item carousel_item__active">
                   <img src="../images/Rakrakan.png" alt="" class="carousel_img">
                </div>
-               <div class="carousel_item">
+               <div class="carousel_item carousel_item__pos_next" >
                   <img src="../images/TheDeck1.jpg" alt="" class="carousel_img">
                </div>
-               <div class="carousel_item">
+               <div class="carousel_item carousel_item__pos_next">
                   <img src="../images/TheDeck55.jpg" alt="" class="carousel_img">
                </div>
             </div>
