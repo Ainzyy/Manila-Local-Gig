@@ -7,12 +7,12 @@
 }
 body{
    height:  100vh;
-   background: #e6e7e2;
+   background: #dbdbdb;
 }
 .header{
-   min-width:  100vh;
+   min-width:  80vh;
    width:   100%;
-   background-color: rgb(192,  197, 202);
+   background-color: #525357;
 }
 nav{
    display: flex;
@@ -35,7 +35,7 @@ nav   img{
    position:   relative;
 }
 .nav-links  ul   li a{
-   color:   black;
+   color:   #dbdbdb;
    text-decoration:  none;
    font-size:  13px;
 }
@@ -43,7 +43,7 @@ nav   img{
    content: '';
    width:   0%;
    height:  2px;
-   background: #272727;
+   background: #e4e1e1;
    display: block;
    margin:  auto;
    transition: 0.5s;
@@ -78,7 +78,7 @@ nav   .fa{
    height:  100vh;
    width:   200px;
    top:  0;
-   right:   -10;
+   right:   -200;
    text-align: left;
    z-index: 2;
    transition: 1s;
