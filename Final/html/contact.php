@@ -11,18 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
   </head>
   <body>
-    <form action="">
+    <form action="https://formspree.io/f/xnqyvboo" method="POST">
       <div class="title">
         <h2>CONTACT</h2>
       </div>
       <div class="half">
         <div class="item">
           <label for="name">NAME</label>
-          <input type="text" id = "name">
+          <input type="text" id = "name" name="Name">
         </div>
         <div class="item">
           <label for="email">EMAIL</label>
-          <input type="text" id = "email">
+          <input type="text" id = "email" name="Email">
         </div>
       </div>
       <div class="full">
@@ -34,10 +34,7 @@
         <input type="reset" value = "RESET">
       </div>
       <div class="icons">
-        <a href="" class = "fa fa-twitter"></a>
-        <a href="" class = "fa fa-facebook"></a>
-        <a href="" class = "fa fa-instagram"></a>
-        <a href="" class = "fa fa-github"></a>
+        <a href="https://github.com/Ainzyy" class = "fa fa-github"></a>
       </div>
     </form>
   </body>
