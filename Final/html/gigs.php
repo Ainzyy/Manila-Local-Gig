@@ -49,10 +49,6 @@
     <section class="manilaMap">
       <h1>Interactive Map</h1>
       <div id="map">
-      <!-- <div class='place' style='text-align: center;'>
-        <h3>Mandala Park</h3>
-        <img src="https://images.summitmedia-digital.com/spotph/images/weekend-market-mandala-park.jpg" width='150px' height='150px' alt="">
-      </div> -->
       </div>
     </section>
 
