@@ -1,25 +1,30 @@
 //------------------ MAP ------------------
-var map = L.map('map');
-map.setView([14.588988, 121.042274], 12);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+var locations = [
+    ["<div style='text-align: center;'><h3>Mandala Park</h3><img src='https://images.summitmedia-digital.com/spotph/images/weekend-market-mandala-park.jpg' width='150px' height='150px' alt=''></div>", 14.588620254901354, 121.04246686560928],
+    ["<div style='text-align: center;'><h3>Social House</h3><img src='../gigvenuephoto/socialhouse.jpg' width='150px' height='150px' alt=''></div>", 14.57610278654274, 121.0191188294643],
+    ["<div style='text-align: center;'><h3>70's Bistro</h3><img src='../gigvenuephoto/19east.jpg' width='150px' height='150px' alt=''></div>", 14.630675046960093, 121.06134121147596],
+    ["<div style='text-align: center;'><h3>19 East</h3><img src='../gigvenuephoto/saguijo.jpg' width='150px' height='150px' alt=''></div>", 14.459092222453174, 121.04599013639363],
+    ["<div style='text-align: center;'><h3>Jess and Pat's</h3><img src='../gigvenuephoto/jessandpats.jpg' width='150px' height='150px' alt=''></div>", 14.647963016092643, 121.05733929964659]
+  ];
+  
+  var map = L.map('map').setView([14.588988, 121.042274], 11);
+  mapLink =
+    '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+  L.tileLayer(
+    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; ' + mapLink + ' Contributors',
+      maxZoom: 18,
+    }).addTo(map);
+  
+  for (var i = 0; i < locations.length; i++) {
+    marker = new L.marker([locations[i][1], locations[i][2]])
+      .bindPopup(locations[i][0])
+      .addTo(map);
+  }
 
-// 1. Markers
-var marker = L.marker([14.588620254901354, 121.04246686560928]).addTo(map);
 
-// 2. Place Description
-let mandala = `
-<div style='text-align: center;'>
-<h3>Mandala Park</h3>
-  <img src="https://images.summitmedia-digital.com/spotph/images/weekend-market-mandala-park.jpg" width='150px' height='150px' alt="">
-</div>
-`
 
-// 3. Popup
-marker.bindPopup(mandala);
 
 
 //------------------ TABLE ------------------
